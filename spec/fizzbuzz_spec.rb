@@ -15,4 +15,9 @@ describe FizzBuzz  do
 		expect(fizzbuzz.is_divisible_by_fifteen?(15)).to be true
 	end
 
+	it "only works with number" do
+		expect{fizzbuzz.is_divisible_by_three?("three")}.to raise_error("RuntimeError")
+	end
+
+
 end
